@@ -23,15 +23,15 @@ const Item = mongoose.model("Item", itemsSchema);
 
 
 const item1 = new Item({
-  name: "Welcome to your todolist!"
+name: "Welcome to your to-do list!"
 });
 
 const item2 = new Item({
-  name: "Hit the + button to add a new item."
+name: "Hit the + button to add a new item."
 });
 
 const item3 = new Item({
-  name: "Check this to delete an item."
+name: "Check box to delete an item."
 });
 
 const defaultItems = [item1, item2, item3];
@@ -149,9 +149,6 @@ app.post("/delete", function(req, res){
 
 });
 
-app.get("/about", function(req, res){
-  res.render("about");
-});
 
 app.listen(3000, function() {
   console.log("Server started on port 3000");
